@@ -4,7 +4,7 @@ category: bitcoin
 name: Ordinals
 version: "0.16.0"
 tagline: Trustlessly view Ordinal inscriptions using your Bitcoin node.
-icon: ordinal-icon.png
+icon: https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/ordinal-icon.png
 description: >
   A block explorer to trustlessly view Ordinal inscriptions. Search blocks, transactions, outputs, and individual satoshis.
 
@@ -26,8 +26,6 @@ dependencies:
 repo: https://github.com/casey/ord
 support: https://discord.gg/ordinals
 gallery:
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
 port: 4000
 path: ""
