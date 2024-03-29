@@ -4,7 +4,7 @@ category: bitcoin
 name: Ordinals
 version: "0.16.0"
 tagline: Trustlessly view Ordinal inscriptions using your Bitcoin node.
-icon: icon.png
+icon: ordinal-icon.png
 description: >
   A block explorer to trustlessly view Ordinal inscriptions. Search blocks, transactions, outputs, and individual satoshis.
 
