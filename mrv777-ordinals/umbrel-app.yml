@@ -25,6 +25,10 @@ dependencies:
   - bitcoin
 repo: https://github.com/casey/ord
 support: https://discord.gg/ordinals
+gallery:
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
 port: 4000
 path: ""
 deterministicPassword: false
