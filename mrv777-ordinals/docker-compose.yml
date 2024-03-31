@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   ord:
-    image: mrv777/ordinals:0.16.0
+    image: mrv777/ordinals:0.17.0
     # This needs to run as root
     # user: "1000:1000"
     restart: on-failure
