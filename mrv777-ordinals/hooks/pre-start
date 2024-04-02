@@ -1,9 +1,25 @@
-# #!/usr/bin/env bash
-# set -euo pipefail
+#!/usr/bin/env bash
+set -euo pipefail
 
-# APP_DATA_DIR="$(readlink -f $(dirname "${BASH_SOURCE[0]}")/../data)"
-# ORDINALS_DATA_DIR="${APP_DATA_DIR}/ord"
-# DESIRED_OWNER="1000:1000"
+APP_DATA_DIR="$(readlink -f $(dirname "${BASH_SOURCE[0]}")/../data)"
+ORDINALS_DATA_DIR="${APP_DATA_DIR}/ord"
+DESIRED_OWNER="1000:1000"
+
+if [ ! -f "${ORDINALS_DATA_DIR}/ord.yaml" ]; then
+    # Define the content for ord.yaml
+    cat <<EOF >"${ORDINALS_DATA_DIR}/ord.yaml"
+cookie_file: /var/lib/bitcoind/.cookie 
+data_dir: /var/lib/ord
+bitcoin_data_dir: /var/lib/bitcoind
+bitcoin_rpc_url: ${APP_BITCOIN_NODE_IP}:${APP_BITCOIN_RPC_PORT}
+chain: ${APP_BITCOIN_NETWORK}
+EOF
+
+    echo "ord.yaml file has been created in ${ORDINALS_DATA_DIR}/ directory."
+else
+    echo "ord.yaml already exists in ${ORDINALS_DATA_DIR}/ directory. Exiting..."
+    exit 1
+fi
 
 # set_correct_permissions() {
 # 	local -r path="${1}"

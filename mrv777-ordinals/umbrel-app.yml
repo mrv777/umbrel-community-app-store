@@ -2,7 +2,7 @@ manifestVersion: 1
 id: mrv777-ordinals
 category: bitcoin
 name: Ordinals
-version: "0.17.1"
+version: "0.17.1a"
 tagline: Trustlessly view Ordinal inscriptions using your Bitcoin node.
 icon: https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/ordinal-icon.png
 description: >
@@ -15,6 +15,8 @@ description: >
   Disclaimer: The Ordinals app does not control, filter, or moderate the content hosted on the Bitcoin blockchain. Consequently, you may come across NSFW (Not Safe For Work), objectionable, or unlawful material while using the app.
 releaseNotes: >-
   This release updates Ord from version 0.17.0 to 0.17.1. Full release notes for Ord can be found at: https://github.com/ordinals/ord/releases
+
+  Release 0.17.1a changes to using an ord.yaml config file in the data/ord directory.
 developer: Casey Rodarmor
 website: https://ordinals.com/
 dependencies:
