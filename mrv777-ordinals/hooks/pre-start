@@ -8,7 +8,7 @@ COOKIE_FILE="/var/lib/bitcoind/.cookie"
 BITCOIN_DATA_DIR="/var/lib/bitcoind"
 
 # Check if APP_BITCOIN_NETWORK is set to 'signet'
-if [ "$APP_BITCOIN_NETWORK" = "signet" ]; then
+if [ "$ORD_CHAIN" = "signet" ]; then
     COOKIE_FILE="/var/lib/bitcoind/signet/.cookie"
     BITCOIN_DATA_DIR="/var/lib/bitcoind/signet"
 fi
@@ -26,7 +26,7 @@ cookie_file: ${COOKIE_FILE}
 data_dir: /var/lib/ord
 bitcoin_data_dir: ${BITCOIN_DATA_DIR}
 bitcoin_rpc_url: ${APP_BITCOIN_NODE_IP}:${APP_BITCOIN_RPC_PORT}
-chain: ${APP_BITCOIN_NETWORK}
+chain: ${ORD_CHAIN}
 EOF
 
 echo "ord.yaml file has been created/updated in ${ORDINALS_DATA_DIR}/ directory."
