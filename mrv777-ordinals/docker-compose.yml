@@ -17,12 +17,3 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/ord:/var/lib/ord
       - ${APP_BITCOIN_DATA_DIR}:/var/lib/bitcoind:ro
-    environment:
-      ORD_DATA_DIR: "/var/lib/ord"
-      ORD_BITCOIN_RPC_USERNAME: "${APP_BITCOIN_RPC_USER}"
-      ORD_BITCOIN_RPC_PASSWORD: "${APP_BITCOIN_RPC_PASS}"
-      ORD_BITCOIN_RPC_URL: "${APP_BITCOIN_NODE_IP}:${APP_BITCOIN_RPC_PORT}"
-      ORD_CHAIN: "${APP_BITCOIN_NETWORK}"
-      # First-inscription-height may not be needed in the future. It would be nice to remove it so that other chains like testnet are not impacted.
-      ORD_FIRST_INSCRIPTION_HEIGHT: "767430"
-      ORD_INDEX_RUNES: "true"
