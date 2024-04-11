@@ -2,7 +2,7 @@ manifestVersion: 1
 id: mrv777-ordinals
 category: bitcoin
 name: Ordinals
-version: "0.18.0c"
+version: "0.18.0d"
 tagline: Trustlessly view Ordinal inscriptions using your Bitcoin node.
 icon: https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/ordinal-icon.png
 description: >
