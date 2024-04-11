@@ -4,22 +4,32 @@ set -euo pipefail
 APP_DATA_DIR="$(readlink -f $(dirname "${BASH_SOURCE[0]}")/../data)"
 ORDINALS_DATA_DIR="${APP_DATA_DIR}/ord"
 DESIRED_OWNER="1000:1000"
+COOKIE_FILE="/var/lib/bitcoind/.cookie"
+BITCOIN_DATA_DIR="/var/lib/bitcoind"
 
-if [ ! -f "${ORDINALS_DATA_DIR}/ord.yaml" ]; then
-    # Define the content for ord.yaml
-    cat <<EOF >"${ORDINALS_DATA_DIR}/ord.yaml"
-cookie_file: /var/lib/bitcoind/.cookie 
+# Check if APP_BITCOIN_NETWORK is set to 'signet'
+if [ "$APP_BITCOIN_NETWORK" = "signet" ]; then
+    COOKIE_FILE="/var/lib/bitcoind/signet/.cookie"
+    BITCOIN_DATA_DIR="/var/lib/bitcoind/signet"
+fi
+
+if [[ ! -f "${APP_DATA_DIR}/AT_LEAST_0-18-0" ]]; then
+    if [[ -f "${ORDINALS_DATA_DIR}/index.redb" ]]; then
+        rm -f "${ORDINALS_DATA_DIR}/index.redb"
+    fi
+    touch "${APP_DATA_DIR}/AT_LEAST_0-18-0"
+fi
+
+# Define the content for ord.yaml with the updated values
+cat <<EOF >"${ORDINALS_DATA_DIR}/ord.yaml"
+cookie_file: ${COOKIE_FILE}
 data_dir: /var/lib/ord
-bitcoin_data_dir: /var/lib/bitcoind
+bitcoin_data_dir: ${BITCOIN_DATA_DIR}
 bitcoin_rpc_url: ${APP_BITCOIN_NODE_IP}:${APP_BITCOIN_RPC_PORT}
 chain: ${APP_BITCOIN_NETWORK}
 EOF
 
-    echo "ord.yaml file has been created in ${ORDINALS_DATA_DIR}/ directory."
-else
-    echo "ord.yaml already exists in ${ORDINALS_DATA_DIR}/ directory. Exiting..."
-    exit 1
-fi
+echo "ord.yaml file has been created/updated in ${ORDINALS_DATA_DIR}/ directory."
 
 # set_correct_permissions() {
 # 	local -r path="${1}"
