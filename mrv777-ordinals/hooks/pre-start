@@ -8,7 +8,7 @@ COOKIE_FILE="/var/lib/bitcoind/.cookie"
 BITCOIN_DATA_DIR="/var/lib/bitcoind"
 
 # Check if APP_BITCOIN_NETWORK is set to 'signet'
-if grep -q -F -l "chain=signet" ~/umbrel/app-data/bitcoin/data/bitcoin/umbrel-bitcoin.conf; then
+if [ "$APP_BITCOIN_NETWORK" = "signet" ]; then
     COOKIE_FILE="/var/lib/bitcoind/signet/.cookie"
     BITCOIN_DATA_DIR="/var/lib/bitcoind/signet"
 fi
