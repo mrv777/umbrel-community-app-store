@@ -43,4 +43,4 @@ services:
       - server
     restart: on-failure
     ports:
-      - "80:80"
+      - "2020:80"
