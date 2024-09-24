@@ -21,6 +21,7 @@ support: https://github.com/benjamin-wilson/public-pool/issues
 gallery:
   - https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/mrv777-ordinals/1.jpg
   - https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/mrv777-ordinals/2.jpg
+port: 2020
 path: ""
 releaseNotes: >-
   Initial release of OMB Public Pool
