@@ -12,12 +12,15 @@ description: >-
   Allows you to pool together any and all mining hardware, with mining rewards going directly to your chosen bitcoin address. 
 
   Track total hashrate and your individual works with ease.
-developer: Benjamin Wilson
+developer: mrv777
 website: https://web.public-pool.io/#/
 dependencies:
   - bitcoin
 repo: https://github.com/benjamin-wilson/public-pool
 support: https://github.com/benjamin-wilson/public-pool/issues
+gallery:
+  - https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/mrv777-ordinals/1.jpg
+  - https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/mrv777-ordinals/2.jpg
 port: 2019
 path: ""
 releaseNotes: >-
