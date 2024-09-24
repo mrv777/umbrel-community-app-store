@@ -27,7 +27,7 @@ services:
       - BITCOIN_RPC_PASSWORD=${APP_BITCOIN_RPC_PASS}
       - BITCOIN_RPC_PORT=${APP_BITCOIN_RPC_PORT}
       - BITCOIN_RPC_TIMEOUT=10000
-      - API_PORT=2019
+      - API_PORT=2020
       - STRATUM_PORT=2018
       - NETWORK=mainnet
       - API_SECURE=false
@@ -43,4 +43,4 @@ services:
       - server
     restart: on-failure
     ports:
-      - "2019:80"
+      - "2020:80"
