@@ -2,7 +2,7 @@ manifestVersion: 1
 id: mrv777-omb-public-pool
 category: bitcoin
 name: OMB Public Pool
-version: "0.0.4"
+version: "0.0.5"
 tagline: Fully Open Source Solo Bitcoin Mining Pool
 description: >-
   Run your own Bitcoin Solo Mining Pool with no fees.
