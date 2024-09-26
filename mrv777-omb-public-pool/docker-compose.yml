@@ -13,7 +13,7 @@ services:
       - DOMAIN=$DEVICE_DOMAIN_NAME
 
   server:
-    image: sethforprivacy/public-pool:820d8d1@sha256:2074bdad3930ad6e07e73f03cc07970cc5c912ab597bc7f11565d22038695d74
+    image: mrv777/omb-public-pool:0.0.1@sha256:2a7602b7122d1f194dcf77c6ef87f567e34ac918175c676b67f02e30001ee01c
     restart: on-failure
     stop_grace_period: 30s
     ports:
