@@ -6,7 +6,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: mrv777/omb-public-pool-ui:0.0.13@sha256:1a076f4981adc283d2eb8b6f1c3f90d9bd4a00a366d887b62c05f442ee0f9e17
+    image: mrv777/omb-public-pool-ui:0.0.14@sha256:a37810f076caa0fb140dfbdd4180ea9b60f12490dfcff29f49a4269e1f60a7e5
     restart: on-failure
     stop_grace_period: 30s
     environment:
