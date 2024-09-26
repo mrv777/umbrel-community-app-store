@@ -13,7 +13,7 @@ services:
       - DOMAIN=$DEVICE_DOMAIN_NAME
 
   server:
-    image: mrv777/omb-public-pool:0.0.3@sha256:2d31c6ebdf8b032d4f575d5b45fd6b3cac48b0f1de40b64c8542ddd32984a207
+    image: mrv777/omb-public-pool:0.0.4@sha256:1b4d6e9170c0b8d68a3f86261d0a4b55a29c1d0469a0d4d2f4228e5e24e7c9c0
     restart: on-failure
     stop_grace_period: 30s
     ports:
