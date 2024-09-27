@@ -6,14 +6,14 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: mrv777/omb-public-pool-ui:0.0.14@sha256:a37810f076caa0fb140dfbdd4180ea9b60f12490dfcff29f49a4269e1f60a7e5
+    image: mrv777/omb-public-pool-ui:0.0.15@sha256:1c7bbba40d5d3107429434ba4b0ad18021a008344c4b97cd6013994e59a553ae
     restart: on-failure
     stop_grace_period: 30s
     environment:
       - DOMAIN=$DEVICE_DOMAIN_NAME
 
   server:
-    image: mrv777/omb-public-pool:0.0.4@sha256:1b4d6e9170c0b8d68a3f86261d0a4b55a29c1d0469a0d4d2f4228e5e24e7c9c0
+    image: mrv777/omb-public-pool:0.0.5@sha256:3d180c53359579cfe4a94b5a02939badc2c6651e64f6205c6ed3dec0e9ffe168
     restart: on-failure
     stop_grace_period: 30s
     ports:
