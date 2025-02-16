@@ -34,7 +34,7 @@ services:
       - ENABLE_SOLO=true
       - ENABLE_PROXY=false
       - POOL_IDENTIFIER="MrV Test Public Pool"
-      - SHARE_SUBMISSION_URL="http://localhost:2019"
+      - SHARE_SUBMISSION_URL="http://192.168.13.193:2019"
       - EXTERNAL_SHARE_SUBMISSION_ENABLED=true
       - MINIMUM_DIFFICULTY=10000
 
