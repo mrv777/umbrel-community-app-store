@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: mrv777-test-public-pool
+category: bitcoin
+name: Test Public Pool
+version: "0.0.1"
+tagline: Fully Open Source Solo Bitcoin Mining Pool
+icon: https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/test-pool-icon.jpg
+description: >-
+  Run your own Bitcoin Solo Mining Pool with no fees.
+
+  Connected to your Bitcoin node, and only your node. Contribute to furthering bitcoin mining decentralisation.
+
+  Allows you to pool together any and all mining hardware, with mining rewards going directly to your chosen bitcoin address. 
+
+  Track total hashrate and your individual works with ease.
+developer: mrv777
+website: https://web.public-pool.io/#/
+dependencies:
+  - bitcoin
+repo: https://github.com/benjamin-wilson/public-pool
+support: https://github.com/benjamin-wilson/public-pool/issues
+gallery:
+  - https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/test-pool-icon.jpg
+port: 2020
+path: ""
+releaseNotes: >-
+  Testing new public pool changes
+defaultPassword: ""
+submitter: mrv777
