@@ -2,7 +2,7 @@ manifestVersion: 1
 id: mrv777-test-public-pool
 category: bitcoin
 name: Test Public Pool
-version: "0.0.7"
+version: "0.0.8"
 tagline: Fully Open Source Solo Bitcoin Mining Pool
 icon: https://raw.githubusercontent.com/mrv777/umbrel-community-app-store/master/test-pool-icon.jpg
 description: >-
