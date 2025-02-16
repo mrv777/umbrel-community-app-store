@@ -13,7 +13,7 @@ services:
       - DOMAIN=$DEVICE_DOMAIN_NAME
 
   server:
-    image: mrv7/public-pool:latest@sha256:877df2c0839099887b67f005d654cfae293231b1bceb334f8cdf2236ac7a7b0c
+    image: mrv7/public-pool:latest@sha256:7c1110b70ef99d2855952f00db2b4dbc1982bbc1d59a71d7a3e79ff79598a584
     restart: on-failure
     stop_grace_period: 30s
     ports:
