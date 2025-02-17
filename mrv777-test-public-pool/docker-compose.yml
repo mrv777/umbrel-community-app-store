@@ -11,6 +11,7 @@ services:
     stop_grace_period: 30s
     environment:
       - DOMAIN=$DEVICE_DOMAIN_NAME
+      - API_URL=http://server:2019
 
   server:
     image: mrv7/public-pool:latest@sha256:b551964d0ae91fd5613873b6e52b0afe7bea2dfb67781cec8853ccbc5d19e4a5
