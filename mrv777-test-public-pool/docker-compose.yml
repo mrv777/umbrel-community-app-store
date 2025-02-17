@@ -6,7 +6,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: mrv7/public-pool-ui:latest@sha256:1df8908df66a470960fbd4cdec57114e1f613394d2a4e51eea3ede9d7dbbed13
+    image: mrv7/public-pool-ui:latest@sha256:3c5697ad680f2c449e9b2b11a2dae71497d744d3a3f269c69844ddeeb5444c52
     restart: on-failure
     stop_grace_period: 30s
     environment:
