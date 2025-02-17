@@ -6,12 +6,11 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: mrv7/public-pool-ui:latest@sha256:39afe00aa98f6653a12ac5262298091a8f0bac2273b1d5feb9b4d3acca75f13b
+    image: mrv7/public-pool-ui:latest@sha256:1df8908df66a470960fbd4cdec57114e1f613394d2a4e51eea3ede9d7dbbed13
     restart: on-failure
     stop_grace_period: 30s
     environment:
       - DOMAIN=$DEVICE_DOMAIN_NAME
-      - API_URL=http://server:2019
 
   server:
     image: mrv7/public-pool:latest@sha256:b551964d0ae91fd5613873b6e52b0afe7bea2dfb67781cec8853ccbc5d19e4a5
