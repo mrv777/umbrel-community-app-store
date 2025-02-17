@@ -13,7 +13,7 @@ services:
       - DOMAIN=$DEVICE_DOMAIN_NAME
 
   server:
-    image: mrv7/public-pool:latest@sha256:42e82ac4b1b1dbfa6e0cfcbcc966e13316684b382cf86de5787d61d1e966d647
+    image: mrv7/public-pool:latest@sha256:de596a627ccbc1aa4f18bb2f0881f3bf5ba70f62d3cd08b80ee0bcda4997bafe
     restart: on-failure
     stop_grace_period: 30s
     ports:
@@ -34,6 +34,8 @@ services:
       - ENABLE_SOLO=true
       - ENABLE_PROXY=false
       - POOL_IDENTIFIER="MrV Test Public Pool"
+      - SHARE_SUBMISSION_URL="http://192.168.13.193:2019"
+      - EXTERNAL_SHARE_SUBMISSION_ENABLED=true
       - MINIMUM_DIFFICULTY=10000
 
   proxy:
